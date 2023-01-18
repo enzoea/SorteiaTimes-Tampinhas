@@ -1,6 +1,6 @@
 var numeroSorteado = document.querySelector('div.box h3')
 const botaoSortear = document.querySelector('div.box button')
-var quantidadeNumeros;
+var quantidadeNumeros = 0;
 var quantidadeNumerosFormatados;
 var roleta = [];
 var aux = 0;
@@ -9,6 +9,11 @@ let tmp;
 var auxSorteio = 0;
 function enviar(){
     quantidadeNumeros = document.getElementById('numberImput').value;
+
+    if(quantidadeNumeros==0){
+        alert("A quantidade de tampinhas a serem sorteadas necessita ser um valor maior que 0.");
+        location.reload();
+    }
     for(i=1; i<=quantidadeNumeros; i++){
         roleta.push(i);
     }
@@ -25,10 +30,15 @@ function enviar(){
 
 botaoSortear.addEventListener("click", () => {
     numeroSorteado.innerHTML = roleta[aux];
-    aux++;
-    if(auxSorteio==quantidadeNumeros){
-        alert("Quantidade de números sorteados finalizados");
-        location.reload();
-    }
+       aux++;
+        if(auxSorteio==quantidadeNumeros){
+            if(auxSorteio==0){
+                alert("Necessário digitar o número de tampinhas a serem sorteadas, sendo diferente de 0.");
+                location.reload();
+            }else{
+                alert("Quantidade de números sorteados finalizados");
+                location.reload();
+            }
+        }
     auxSorteio++;
 })
