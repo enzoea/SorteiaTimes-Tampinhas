@@ -17,3 +17,21 @@ div.box button{
     padding: 150px 150px;
     cursor: pointer;
 }
+
+div.quant{
+    text-align: center;
+    align-items: center;
+    padding: 0px 25% 0px 25%;
+}
+
+div.quant input{
+    align-items: center;
+    font-size: 80%;
+    text-align: center;
+    border-radius: 30px;
+    padding: 15px 15px;
+}
+
+div.quant button{
+    align-items: center;
+}
