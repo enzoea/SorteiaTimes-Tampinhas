@@ -28,6 +28,7 @@ botaoSortear.addEventListener("click", () => {
     aux++;
     if(auxSorteio==quantidadeNumeros){
         alert("Quantidade de números sorteados finalizados");
+        location.reload();
     }
     auxSorteio++;
 })
