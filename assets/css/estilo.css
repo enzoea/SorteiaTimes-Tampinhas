@@ -1,0 +1,19 @@
+div.box{
+    min-width: 50px;
+    text-align: center;
+    align-items: center;
+}
+
+div.box button{
+    align-items: center;
+    font-size: 200%;
+    text-align: center;
+    color: white;
+    background-image: url('images/tampinha.png');
+    background-position: center;
+    background-size: 300px;
+    background-repeat: no-repeat;
+    border-radius: 300px;
+    padding: 150px 150px;
+    cursor: pointer;
+}
