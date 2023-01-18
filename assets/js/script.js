@@ -1,5 +1,7 @@
-var numeroSorteado = document.querySelector('div.box h3')
-const botaoSortear = document.querySelector('div.box button')
+var numeroSorteado = document.querySelector('div.box h3');
+const botaoSortear = document.querySelector('div.box button');
+var botaoAlteradoQuantidade = document.querySelector('div.quant h3');
+const botaoEnviarQuantidade = document.querySelector('div.quant button');
 var quantidadeNumeros = 0;
 var quantidadeNumerosFormatados;
 var roleta = [];
@@ -7,6 +9,8 @@ var aux = 0;
 let randomNumber;
 let tmp;
 var auxSorteio = 0;
+var numeroEnviado = "Número enviado";
+
 function enviar(){
     quantidadeNumeros = document.getElementById('numberImput').value;
 
@@ -27,6 +31,9 @@ function enviar(){
         roleta[i] = tmp;
     }
 }
+botaoEnviarQuantidade.addEventListener("click", () => {
+    botaoAlteradoQuantidade.innerHTML = numeroEnviado;
+})
 
 botaoSortear.addEventListener("click", () => {
     numeroSorteado.innerHTML = roleta[aux];
